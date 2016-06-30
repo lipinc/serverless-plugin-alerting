@@ -528,8 +528,8 @@ module.exports = function(S) {
                 Threshold: alertConfig.alarmThreshold,
                 AlarmDescription: alertConfig.description,
                 Dimensions: dimensions,
-                InsufficientDataActions: [notificationAction],
-                OKActions: [notificationAction],
+                //InsufficientDataActions: [notificationAction],
+                //OKActions: [notificationAction],
                 AlarmActions: [notificationAction]
             };
 

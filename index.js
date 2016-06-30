@@ -2,8 +2,7 @@
 
 module.exports = function(S) {
 
-    const AWS      = require('aws-sdk'),
-        SCli       = require(S.getServerlessPath('utils/cli')),
+  const SCli       = require(S.getServerlessPath('utils/cli')),
         SUtils     = require(S.getServerlessPath('utils')),
         fs         = require('fs'),
         BbPromise  = require('bluebird'); // Serverless uses Bluebird Promises and we recommend you do to because they provide more than your average Promise :)
@@ -298,6 +297,7 @@ module.exports = function(S) {
          * @return void
          */
         _initAws (region) {
+            const AWS = require('aws-sdk');
             let _this = this,
                 credentials = S.getProvider('aws').getCredentials(_this.stage, region);
 
